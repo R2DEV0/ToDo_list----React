@@ -20,7 +20,7 @@ const Task = (props) => {
     };
 
     return(
-        <div className="container" style={{ border: '1px solid black' }}>
+        <div className="container" style={{ border: '1px dotted gray', borderRadius: '10px', marginBottom: '10px', padding: '5px' }}>
             <h4 style ={{ textDecoration: 'style' }} >{task.name}</h4>
             <div className="container">
                 <label htmlFor="checkbox">  Completed?  </label>

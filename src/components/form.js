@@ -1,7 +1,9 @@
 import React from 'react';
 
+var randomWords = require('random-words');
+
 const Form = (props) => {
-    const{list, setList, index} = props;
+    const{list, setList} = props;
         let task={
             name: "",
             isComplete: false
@@ -14,7 +16,7 @@ const Form = (props) => {
         setList([...list])
         if(task.name === ""){
             task={
-                name: 'N/A',
+                name: randomWords({exactly: 1, wordsPerString:5}),
                 isComplete: false
             }
         }
@@ -24,7 +26,7 @@ const Form = (props) => {
     return(
         <div className="container w-50 mt-3">
             <input className="form-control"onChange={onChange} type='text' name='task'/>
-            <button className="btn btn-primary btn-block mt-1"onClick={onClick}>Add Task</button>
+            <button className="btn btn-primary btn-block mt-1"onClick={onClick}>Add New Task</button>
         </div>
     )
 }

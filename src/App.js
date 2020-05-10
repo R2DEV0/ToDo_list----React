@@ -10,9 +10,10 @@ function App() {
 
   return (
     <div className="App container" style={{width: '800px'}}>
+      <h1 >Kevin's To-Do List</h1>
       <Form list={list} setList={setList} />
       <br/>
-      {list.map((task, i)  => (<Task task={task} setList={setList} index={i} list={list} />))}
+      {list.map((task, i) => (<Task task={task} setList={setList} index={i} list={list} />))}
     </div>
   );
 }
